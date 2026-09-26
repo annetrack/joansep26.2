@@ -1,0 +1,145 @@
+<!--
+============================================================
+VOICEWORK — CLIENT-READY FILE STRUCTURE
+============================================================
+index.html   -> page structure + content
+styles.css   -> all styling, typography, responsive rules
+script.js    -> interactions, CTA URL, cursor, navigation
+
+Keep CSS in styles.css and JavaScript in script.js.
+This structure is intended to be easy to edit and deliver to clients.
+============================================================
+--><!--
+============================================================
+VOICEWORK — CODE GUIDE
+============================================================
+QUICK EDIT MAP
+01. GLOBAL DESIGN TOKENS       -> colors, fonts, radius, widths
+02. GLOBAL TYPOGRAPHY          -> Inter / structural text
+03. COMMENTARY TEXT            -> .vw-commentary (gold Caveat)
+04. HEADER / NAVIGATION
+05. PRIMARY CTA BUTTONS
+06. SECONDARY BUTTONS
+07. HERO SECTION
+08. VOICEWORK ENGINE
+09. PROCESS SECTION
+10. SERVICES / CONTENT SECTIONS
+11. VOICEWORK COMMITMENT
+12. FAQ
+13. FINAL CTA
+14. FOOTER
+15. RESPONSIVE RULES
+
+IMPORTANT:
+- Structural text = Inter
+- Commentary text = .vw-commentary
+- Do NOT create separate font rules for the three commentary lines.
+- Main booking CTA URL is the Calendly URL used throughout the page.
+- Existing layout/interaction CSS is preserved below this guide.
+============================================================
+-->
+<!DOCTYPE html>
+
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Voicework — Your Podcast. Professionally Managed.</title><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+<link href="styles.css" rel="stylesheet"/></head><body>
+<!-- =========================================================
+Voicework CTA — EDIT THIS ONE LINE
+Your CTA currently goes to Calendly.com.
+When your exact Calendly booking link is ready, replace ONLY the URL below.
+========================================================= -->
+
+<nav><div class="logo voice-work-logo"><div class="voice-work-name">Voicework</div><div class="voice-work-subtitle">VIDEO AND AUDIO EDITING SERVICES</div></div><div class="links"><a href="#problem">Problem</a><a href="#services">Services</a><a href="#process">Process</a><a href="#proof">Proof</a><a href="#why">Why Voicework</a><a href="#faq">FAQ</a></div><a class="btn primary-cta" href="https://calendly.com/voicework-audioeditingservice/30min" rel="noopener" target="_blank">Book a Discovery Call →</a></nav>
+<header class="hero"><div class="wrap"><span class="ey">FULL-SERVICE PODCAST PRODUCTION PARTNER</span><h1>Your Podcast.<br/><span class="grad">Professionally Managed.</span></h1><p>Stop spending hours editing, publishing, and creating content after every episode. Voicework takes care of podcast production, video editing, publishing, show notes, and content repurposing so you can stay focused on recording great conversations and growing your business.</p><div class="actions"><a class="btn primary-cta" href="https://calendly.com/voicework-audioeditingservice/30min" rel="noopener" target="_blank">Book a Discovery Call →</a><a class="btn ghost" href="#services">Explore Services ↓</a></div></div></header>
+<div class="flow">
+<div class="wrap">
+<div class="box">
+<div class="engine-head">
+<div class="engine-brand">
+<div class="engine-name"><span>Voicework</span><em>Engine</em></div>
+<div class="engine-rule"></div>
+</div>
+<div class="engine-copy">
+<div class="engine-kicker">FROM RECORDING TO RESULTS</div>
+<div class="engine-intro">One recording goes in. Voicework handles the production, repurposing, scheduling, and publishing — turning it into a complete content system.</div>
+</div>
+<div class="engine-status"><i></i> Fully Managed Production</div>
+</div>
+<div class="grid5">
+<div class="stage active" onclick="stage(this,'You record the conversation. That is the only production work we need from you.')">
+<small>STEP 01</small>
+<span aria-hidden="true" class="stage-icon"><svg viewbox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"></path><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"></path></svg></span>
+<strong>Podcast Episode</strong>
+<small>Raw recording</small>
+</div>
+<div class="stage" onclick="stage(this,'We handle cleanup, mixing, video editing, captions, and polish.')">
+<small>STEP 02</small>
+<span aria-hidden="true" class="stage-icon"><svg viewbox="0 0 24 24"><path d="m14 4 6 6"></path><path d="m13 5-8 8 6 6 8-8"></path><path d="M5 19 3 21"></path><path d="m17 3 1.5-1.5M20.5 6.5 22 5"></path></svg></span>
+<strong>Video Editing</strong>
+<small>Production handled</small>
+</div>
+<div class="stage" onclick="stage(this,'One recording becomes a library of short-form assets ready for distribution.')">
+<small>STEP 03</small>
+<span aria-hidden="true" class="stage-icon"><svg viewbox="0 0 24 24"><rect height="16" rx="3" width="18" x="3" y="4"></rect><path d="m10 9 5 3-5 3V9Z"></path></svg></span>
+<strong>Reels Created</strong>
+<small>Hooks + captions</small>
+</div>
+<div class="stage" onclick="stage(this,'Your approved content is scheduled across the platforms that matter to your audience.')">
+<small>STEP 04</small>
+<span aria-hidden="true" class="stage-icon"><svg viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3M7 18h3"></path></svg></span>
+<strong>Social Scheduled</strong>
+<small>Approved</small>
+</div>
+<div class="stage" onclick="stage(this,'The finished episode and supporting content are published and working for your brand.')">
+<small>STEP 05</small>
+<span aria-hidden="true" class="stage-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9S14.5 18.5 12 21M12 3c-2.5 2.5-3.5 5.5-3.5 9S9.5 18.5 12 21"></path></svg></span>
+<strong>Published Everywhere</strong>
+<small>Apple · Spotify · Socials</small>
+</div>
+</div>
+<div class="detail" id="detail"><span class="detail-line"></span><span class="vw-commentary">You record the conversation. We handle the rest.</span><span class="detail-line"></span></div>
+</div>
+</div>
+</div>
+<section "="" aria-label="Trusted by creators, coaches, consultants and growing businesses" class="trust-strip">
+<div class="wrap">
+<div class="trust-title">TRUSTED BY CREATORS, COACHES, CONSULTANTS AND GROWING BUSINESSES</div>
+<div class="trust-logos">
+<div class="trust-logo"><span class="trust-icon">◉</span> CREATORS STUDIO</div>
+<div class="trust-logo"><span class="trust-icon">⌁</span> GROWTH VENTURES</div>
+<div class="trust-logo"><span class="trust-icon">♟</span> EXECUTIVE MEDIA</div>
+<div class="trust-logo"><span class="trust-icon">●</span> THOUGHT LEADERS</div>
+<div class="trust-logo"><span class="trust-icon">▮</span> AUTHOR PRESS</div>
+</div>
+</div>
+</section>
+<section class="alt" id="problem"><div class="wrap"><div class="problem"><div><span class="ey">THE POST-PRODUCTION TRAP</span><h2>Recording Is Only <span class="grad">20%</span> Of The Work.</h2><p class="muted">Most podcasters love recording. Few enjoy everything that comes afterward.</p><div class="pain"><div>◉ Hours spent editing videos</div><div>✕ Creating short-form clips</div><div>✕ Writing SEO sections</div><div>☁ Uploading across platforms</div><div>✕ Managing podcast hosting</div><div>✕ Keeping social media active</div></div><p class="muted">It quickly becomes overwhelming. That's where Voicework comes in.</p></div><div class="calc"><span class="ey">TIME RECOVERY CALCULATOR</span><label>Episodes per month <output id="eo">4</output></label><input id="ep" max="12" min="1" type="range" value="4"/><label>Episode length <output id="lo">60 min</output></label><input id="ln" max="120" min="20" step="10" type="range" value="60"/><div class="metric">DIY production time <b id="diy">32 hrs / mo</b></div><div class="metric">Voicework client time <b id="cl">4 hrs / mo</b></div><div class="metric big">Hours reclaimed <b id="sv">28 hrs / mo</b></div><a class="btn primary-cta" href="https://calendly.com/voicework-audioeditingservice/30min" rel="noopener" style="width:100%" target="_blank">Reclaim Your Time →</a></div></div></div></section>
+<section id="services"><div class="wrap"><div class="head"><span class="ey">EVERYTHING AFTER RECORDING</span><h2>Everything After Recording, <span class="grad">Handled.</span></h2><p>Whether you publish weekly or monthly, Voicework manages your content from raw recording to published episodes and promotional content.</p></div><div class="cards"><div class="card"><h3>🎥 Video Podcast Editing</h3><p>Professional editing for polished, engaging episodes.</p><ul><li>Multi-camera switching</li><li>Color &amp; audio polish</li><li>Dynamic captions</li><li>Animated graphics</li></ul></div><div class="card"><h3>☁ Podcast Publishing &amp; Hosting</h3><p>We handle uploads, metadata, distribution and scheduling.</p></div><div class="card"><h3>✂ Content Repurposing</h3><p>Turn one episode into weeks of short-form content.</p></div><div class="card"><h3>↗ Social Media Publishing</h3><p>Stay consistent without spending hours online.</p></div><div class="card"><h3>▤ Show Notes &amp; SEO</h3><p>Titles, takeaways, resources and search-ready notes.</p></div><div class="card"><h3>▮ AI Audiobook to Podcast</h3><p>Transform existing audiobook content into structured podcast episodes.</p></div></div></div></section>
+<section class="alt" id="process"><div class="wrap"><div class="head"><span class="ey">THE STREAMLINED WORKFLOW</span><h2>A Simple <span class="grad">Process.</span></h2><p>Four seamless steps to elevate your podcast without lifting a finger post-recording.</p></div><div class="process-shell"><div class="process-line"></div><div class="process"><div class="step"><div class="num">01</div><h3>You Record</h3><p>Focus on great conversations. Do what you do best.</p></div><div class="step"><div class="num">02</div><h3>Upload Your Files</h3><p>Drop your raw audio and video into your project cloud.</p></div><div class="step"><div class="num">03</div><h3>We Handle Everything</h3><p>Editing, publishing, repurposing and scheduling.</p></div><div class="step"><div class="num">04</div><h3>Your Podcast Grows</h3><p>Your content works consistently across every platform.</p></div></div></div></div></section>
+<section class="proof" id="proof"><div class="head"><span class="ey">CLIENT SUCCESS</span><h2>The Work Speaks <span class="grad">For Itself.</span></h2><p>Recent episodes managed end-to-end by the Voicework production team.</p></div><div class="wrap"><div class="marquee"><div class="track"><div class="set">VIDEO_CARDS</div><div aria-hidden="true" class="set">VIDEO_CARDS</div></div></div><p class="vw-commentary video-watch">Click a thumbnail to watch</p></div></section>
+<section class="systems"><div class="wrap"><div class="head"><span class="ey">SYSTEMS &amp; EXECUTION</span> 
+  <h2>Built on Professional Systems, <span class="grad">Not Empty Promises.</span></h2>
+  <p>At Voicework, we believe trust is earned through consistent execution. Our focus is simple: deliver polished episodes, streamline your workflow, and help every podcast create more value from every recording.</p></div><div class="cards"><div class="card"><h3>Professional Editing</h3><p>Every episode is carefully edited for clear audio, engaging visuals, and a polished viewing experience.</p></div><div class="card"><h3>Content That Works Harder</h3><p>One podcast recording can become multiple pieces of content for YouTube, Instagram, TikTok, LinkedIn, Facebook, and more.</p></div><div class="card"><h3>Consistent Publishing</h3><p>Never worry about missed uploads or inconsistent schedules. We keep your podcast moving smoothly forward.</p></div><div class="card"><h3>AI-Powered Workflows</h3><p>Modern AI tools help us speed up repetitive tasks while maintaining quality, allowing you to publish faster without sacrificing professionalism.</p></div><div class="card"><h3>Organized Production</h3><p>From raw recordings to published episodes, every project follows a structured workflow to ensure consistency and reliability.</p></div><div class="card"><h3>Personal Partnership</h3><p>You're not hiring another freelancer—you're gaining a dedicated post-podcast management partner invested in helping your content succeed.</p></div></div>
+<div class="commitment-box commitment-reference">
+<div class="commitment-eyebrow">OUR CORE PROMISE</div>
+<h2>The <span class="grad">Voicework Commitment</span></h2>
+<p>Building a successful podcast takes consistency. Voicework exists to remove the technical workload so you can spend more time recording, connecting with your audience, and growing your brand.</p>
+<div class="commitment-divider"></div>
+<p class="vw-commentary">“Let the quality of the work speak louder than marketing claims.”</p>
+</div>
+</div></section><section class="testimonials"><div class="wrap"><div class="head"><span class="ey">CLIENT TESTIMONIALS</span><h2>Trusted by Creators Who <span class="grad">Care About Their Work.</span></h2></div><div class="quotes"><div class="quote"><div class="stars">★★★★★</div><p>“Beyond her technical skills, Joan has been a reliable and trustworthy collaborator. She has delivered exceptional results and has proven herself to be someone I can depend on without hesitation.”</p><b>Michael Rearden</b><small>Founder, Reven Concepts</small></div><div class="quote"><div class="stars">★★★★★</div><p>“Joan has been handling our video podcast editing for at least six months now. She's very easy to work with and makes it substantially easier for me as a podcast host.”</p><b>Bri Conn</b><small>Creator / Podcast Host</small></div><div class="quote"><div class="stars">★★★★★</div><p>“Within the first moments of working with Joan, I could see that she was hard-working, flexible, has great attention to detail, and can be trusted.”</p><b>Charlie Baxter</b><small>Podcast Creator</small></div><div class="quote"><div class="stars">★★★★★</div><p>“Joan went above and beyond and offered help even without me asking. She assessed an episode and helped solve the problem.”</p><b>Patty Roxas Cruz</b><small>Personal Branding &amp; Communications</small></div><div class="quote"><div class="stars">★★★★★</div><p>“Joan edited a podcast episode for me. I appreciate her on-time delivery and how thoroughly she followed my instructions.”</p><b>Khusish K.</b><small>Podcast / Media</small></div></div></div></section>
+<section class="about"><div class="wrap"><div class="about-grid"><div class="about-photo"><div class="about-photo-inner">Joan</div></div><div class="about-copy"><span class="ey">ABOUT JOAN</span><h2>Meet Joan.<br/><span class="grad">The Person Behind Voicework</span></h2><p class="muted">I’m Joan, the person behind Voicework I help creators, coaches, consultants, authors and businesses take the production work off their plate — from editing and publishing to turning one recording into content that keeps working.</p><p class="muted">The goal isn't simply to deliver edited files. Voicework is built to remove the technical workload so you can spend more time recording, connecting with your audience, and growing your brand.</p><div class="about-points"><span>✓ Detail-oriented</span><span>✓ Reliable partner</span><span>✓ Systems-driven</span><span>✓ Committed to your success</span></div></div></div></div></section>
+<section class="alt"><div class="wrap"><div class="head"><span class="ey">THE TRANSFORMATION</span><h2>Before vs. <span class="grad">After Voicework</span></h2><p>See what shifts when you transition from DIY burnout to hands-free production.</p></div><div class="twocol"><div class="before"><h3>● Before Voicework</h3><div class="label">High Friction</div><ul><li><b>Editing late at night:</b> Hours spent cutting timeline gaps instead of relaxing or working on high-value business.</li><li><b>Missed publishing dates:</b> Inconsistent schedules that confuse listeners and hurt algorithm rankings.</li><li><b>No social media consistency:</b> Great podcast nuggets stay buried inside long recordings.</li><li><b>Hours spent creating clips:</b> Struggling with aspect ratios, subtitles, and formatting for different apps.</li><li><b>Podcast growth feels slow:</b> Burnout sets in before momentum can take hold.</li></ul></div><div class="after"><h3>● After Voicework</h3><div class="label">Effortless Growth</div><ul><li><b>Consistent publishing:</b> Your episodes drop like clockwork every week without stress.</li><li><b>Professional content every week:</b> Broadcast-quality video, polished audio, and custom graphics.</li><li><b>More time to record:</b> Focus 100% of your energy on booking top guests and having great conversations.</li><li><b>Better audience engagement:</b> Short-form Reels and Shorts drive steady organic traffic back to main episodes.</li><li><b>Peace of mind:</b> Knowing a dedicated professional team is handling every single detail.</li></ul></div></div></div></section>
+<section class="alt" id="why"><div class="wrap"><div class="head"><span class="ey">THE Voicework DIFFERENCE</span><h2>Why Voicework <span class="grad">Works Differently</span></h2></div><div class="mini-grid"><div class="mini"><h3>⏱ Save Time</h3><p>Get the production work off your plate so your recording time stays focused on the conversation.</p></div><div class="mini"><h3>▣ Stay Consistent</h3><p>Your podcast keeps moving on a reliable publishing rhythm without you managing every detail.</p></div><div class="mini"><h3>◇ Professional Quality</h3><p>Every episode is edited and prepared to reflect the quality of your brand.</p></div><div class="mini"><h3>◉ Content That Works Harder</h3><p>One recording becomes episodes, clips, show notes and social-ready assets.</p></div><div class="mini"><h3>◌ Systems, Not Scrambling</h3><p>A repeatable production workflow replaces the last-minute editing and publishing scramble.</p></div><div class="mini"><h3>▣ A Production Partner</h3><p>You get someone thinking beyond the edit and helping keep the whole content operation moving.</p></div></div></div></section>
+<section class="alt" id="faq"><div class="wrap"><div class="head"><span class="ey">QUESTIONS, ANSWERED</span><h2>Frequently Asked <span class="grad">Questions.</span></h2></div><div class="faq"><div class="faqitem open"><button class="q" onclick="faq(this)">Do you edit video podcasts? <span>⌃</span></button><div class="ans">Yes. We professionally edit video podcasts with branding, dynamic captions, transitions, multi-camera switching, color correction and polished visuals.</div></div><div class="faqitem"><button class="q" onclick="faq(this)">Can you publish my episodes? <span>⌄</span></button><div class="ans">Yes. We can manage publishing, uploads, metadata, show notes, tags and artwork through your preferred hosting setup.</div></div><div class="faqitem"><button class="q" onclick="faq(this)">Do you create social media content? <span>⌄</span></button><div class="ans">Absolutely. Episodes can be repurposed into short-form videos, clips, quote graphics and optimized captions.</div></div><div class="faqitem"><button class="q" onclick="faq(this)">Can you turn my audiobook into a podcast? <span>⌄</span></button><div class="ans">Yes. AI-assisted workflows can help turn existing audiobook content into a structured podcast series.</div></div><div class="faqitem"><button class="q" onclick="faq(this)">Who do you work with? <span>⌄</span></button><div class="ans">Creators, coaches, consultants, authors and businesses that want consistent publishing without managing post-production themselves.</div></div></div></div></section>
+<section class="cta"><div class="wrap"><div class="box"><h2>Focus On Recording.<br/><span class="grad">We'll Handle The Rest.</span></h2><p class="muted">Every episode deserves professional editing, strategic publishing and content that keeps working long after you stop recording.</p><a class="btn primary-cta" href="https://calendly.com/voicework-audioeditingservice/30min" rel="noopener" target="_blank">Book Your Discovery Call →</a></div></div></section><footer><div class="wrap"><div class="footer-grid"><div><div class="logo voice-work-logo"><div class="voice-work-name">Voicework</div><div class="voice-work-subtitle">VIDEO AND AUDIO EDITING SERVICES</div></div><div style="margin-top:8px">You record. We handle everything else.</div></div><div aria-label="Social links" class="socials">
+<a aria-label="LinkedIn" class="social" href="http://linkedin.com/in/joan-peconcillo-758171b6/" rel="noopener" target="_blank">in</a>
+<a aria-label="Facebook" class="social" href="https://www.facebook.com/joan.peconcillo.92" rel="noopener" target="_blank">f</a>
+</div><div class="credit"></div></div><div style="display:flex;justify-content:space-between;gap:16px;margin-top:25px;padding-top:16px;border-top:1px solid var(--line)"><span>© 2026 Voicework Agency. All rights reserved.</span><span>Premium Post-Podcast Production Management.</span></div></div></footer>
+
+
+
+
+<script src="script.js"></script></body></html>
